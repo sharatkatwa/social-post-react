@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .font-bebas {
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .font-inter{
+    font-family: "Inter", sans-serif;
+  }
+  
+}
