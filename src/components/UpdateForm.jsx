@@ -12,12 +12,12 @@ const UpdateForm = ({postDetails, updatePost ,id, setShowUpdate}) => {
     setShowUpdate((prev)=> !prev)
   }
   return (
-     <div className="max-w-500 w-100  h-130  rounded-xl shadow-2xl p-4 z-10">
+     <div className="max-w-500 w-95 rounded-2xl shadow-2xl p-4">
       <h1 className="text-center text-4xl font-bebas bg-gradient-to-l from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] bg-clip-text text-transparent">
         Edit Post
       </h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleData)}>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <label className="font-semibold text-gray-600" htmlFor="image">
             image URL
           </label>
@@ -32,7 +32,7 @@ const UpdateForm = ({postDetails, updatePost ,id, setShowUpdate}) => {
           />
             {errors.image && <p className="text-red-500">{errors.image.message}</p>}
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <label className="font-semibold text-gray-600" htmlFor="description">
             Description
           </label>
@@ -47,7 +47,7 @@ const UpdateForm = ({postDetails, updatePost ,id, setShowUpdate}) => {
             {errors.description && <p className="text-red-500">{errors.description.message}</p>}
           
         </div>
-        <button className="text-xl bg-blue-700 text-white rounded py-2 hover:bg-blue-900 active:scale-[.99]">
+        <button className="text-xl bg-blue-700 text-white rounded-xl py-2 hover:bg-blue-900 active:scale-[.99] transition duration-200">
           Save
         </button>
       </form>

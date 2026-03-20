@@ -45,7 +45,7 @@ const PostForm = ({setAllPost, setShowPost}) => {
             {errors.description && <p className="text-red-500">{errors.description.message}</p>}
           
         </div>
-        <button className="text-xl bg-blue-700 text-white rounded py-2 hover:bg-blue-900 active:scale-[.99]">
+        <button className="text-xl bg-indigo-500 text-white rounded py-2 hover:bg-indigo-700 active:scale-[.99]">
           Post
         </button>
       </form>
