@@ -12,7 +12,7 @@ const UpdateForm = ({postDetails, updatePost ,id, setShowUpdate}) => {
     setShowUpdate((prev)=> !prev)
   }
   return (
-     <div className="max-w-500 w-95 rounded-2xl shadow-2xl p-4">
+     <div className="max-w-500 w-95 max-w-95 rounded-2xl shadow-2xl p-4">
       <h1 className="text-center text-4xl font-bebas bg-gradient-to-l from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] bg-clip-text text-transparent">
         Edit Post
       </h1>

@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import PostCard from "./components/PostCard";
 import { FaPlus } from "react-icons/fa";
-// import { RxCross2 } from "react-icons/rx";
 import PostForm from "./components/PostForm";
-// import UpdateForm from "./components/UpdateForm";
 
 const App = () => {
-  const [showPost, setShowPost] = useState(true);
-  const [allPost, setAllPost] = useState([]);
+  
+  const [showPost, setShowPost] = useState(true); // toggle post card state
+  const [allPost, setAllPost] = useState([]); // All posts save here
 
-  // console.log(allPosts)
+// Post delete function
   const deletePost = (id) => {
     const updatedPost = allPost.filter((elem, idx) => idx !== id);
     setAllPost([...updatedPost]);
   };
+  
+  // Post Update function
   const updatePost = (image, description, id) => {
     const updatedPost = allPost.map((elem, idx) => {
       if (id == idx) {
@@ -27,8 +28,11 @@ const App = () => {
     });
     setAllPost([...updatedPost]);
   };
+  
+  
   return (
     <>
+      {/* NavBar */}
       <nav className="flex items-center justify-between h-20 px-10 sm:px-20 font-inter shadow sticky top-0 z-10 backdrop-blur-2xl">
         <div className="left  flex items-center font-bebas text-2xl">
           <div className="img-container w-15">
@@ -52,11 +56,11 @@ const App = () => {
         </div>
       </nav>
 
+      {/* main Content */}
       <div className="grid grid-cols-[repeat(auto-fit,minmax(380px,max-content))] justify-center max-w-[1400px] mx-auto gap-4 font-inter my-10">
-        {}
         {showPost ? (
           <>
-            {allPost.length <= 0 && <h3 className="text-xl bg-red-400 text-gray-500 mt-[30vh]">Empty Post</h3>}{" "}
+            {allPost.length <= 0 && <h3 className="text-xl text-center text-gray-500 mt-[30vh]">Empty Post</h3>}{" "}
             {allPost.map((elem, idx) => (
               <PostCard postDetails={elem} key={idx} id={idx} deletePost={deletePost} updatePost={updatePost} />
             ))}
