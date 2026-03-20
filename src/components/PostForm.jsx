@@ -17,6 +17,8 @@ const PostForm = ({setAllPost, setShowPost}) => {
         Post Here
       </h1>
       <form className="flex flex-col gap-4" onSubmit={handleSubmit(handleData)}>
+      
+        {/* Image input div */}
         <div className="flex flex-col gap-2">
           <label className="font-semibold text-gray-600" htmlFor="image">
             image URL
@@ -24,13 +26,14 @@ const PostForm = ({setAllPost, setShowPost}) => {
           <input
             {...register('image',{required:"Upload image to post"})}
             type="text"
-            // accept="image/*"
             name="image"
             className="outline-none border-3 border-gray-300 py-2 px-2 rounded-xl"
             placeholder="Example: https://unsplash.com/images?q=tbn"
           />
             {errors.image && <p className="text-red-500">{errors.image.message}</p>}
         </div>
+        
+        {/* Description input div */}
         <div className="flex flex-col gap-2">
           <label className="font-semibold text-gray-600" htmlFor="description">
             Description
@@ -43,8 +46,9 @@ const PostForm = ({setAllPost, setShowPost}) => {
             placeholder="Write caption here"
           />
             {errors.description && <p className="text-red-500">{errors.description.message}</p>}
-          
         </div>
+        
+        {/* Post button */}
         <button className="text-xl bg-indigo-500 text-white rounded py-2 hover:bg-indigo-700 active:scale-[.99]">
           Post
         </button>

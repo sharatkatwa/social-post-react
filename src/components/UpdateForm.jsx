@@ -8,7 +8,9 @@ const UpdateForm = ({postDetails, updatePost ,id, setShowUpdate}) => {
   } = useForm();
   
   const handleData = (e)=>{
+  // call Post update function
     updatePost(e.image,e.description ,id)
+  // show Postcard after update comming from Postcard.jsx(toggle State)
     setShowUpdate((prev)=> !prev)
   }
   return (
