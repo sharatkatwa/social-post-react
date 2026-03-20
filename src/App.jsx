@@ -3,7 +3,7 @@ import PostCard from "./components/PostCard";
 import { FaPlus } from "react-icons/fa";
 import PostForm from "./components/PostForm";
 
-// FLOW
+// READ THIS to UNDERSTAND FLOW
 
 // POST FLOW
 // --clicking on post button displays post form 
