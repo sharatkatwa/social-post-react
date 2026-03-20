@@ -56,7 +56,7 @@ const App = () => {
         {}
         {showPost ? (
           <>
-            {allPost.length <= 0 && <h3 className="text-xl text-gray-500 mt-[30vh]">Empty Post</h3>}{" "}
+            {allPost.length <= 0 && <h3 className="text-xl bg-red-400 text-gray-500 mt-[30vh]">Empty Post</h3>}{" "}
             {allPost.map((elem, idx) => (
               <PostCard postDetails={elem} key={idx} id={idx} deletePost={deletePost} updatePost={updatePost} />
             ))}

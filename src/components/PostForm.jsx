@@ -12,7 +12,7 @@ const PostForm = ({setAllPost, setShowPost}) => {
     setShowPost((prev)=>!prev)
   }
   return (
-    <div className="max-w-500 w-150 h-fit  rounded-xl shadow-2xl p-4 ">
+    <div className="max-w-500 w-150 max-w-150 h-fit  rounded-xl shadow-2xl p-4 ">
       <h1 className="text-center text-4xl font-bebas bg-gradient-to-l from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] bg-clip-text text-transparent">
         Post Here
       </h1>
