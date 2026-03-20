@@ -24,7 +24,7 @@ const App = () => {
 
 // Post delete function
   const deletePost = (id) => {
-    const updatedPost = allPost.filter(( idx) => idx !== id);
+    const updatedPost = allPost.filter((elem, idx) => idx !== id);
     setAllPost([...updatedPost]);
   };
   
