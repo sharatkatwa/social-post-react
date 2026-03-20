@@ -3,14 +3,28 @@ import PostCard from "./components/PostCard";
 import { FaPlus } from "react-icons/fa";
 import PostForm from "./components/PostForm";
 
+// FLOW
+
+// POST FLOW
+// --clicking on post button displays post form 
+// --when you submit form that post details will added to allPost state in an array
+// --App component map each obj and show cards one by one card details is sent to PostCard.jsx using props called postDetails
+
+// DELETE FLOW
+// --onClicking delete btn in PostCard.jsx a fn is called deletePost(which is in App.jsx sent through props)
+
+// UPDATE FLOW 
+// --updatePost() sent from App.jsx -> PostCard.jsx --> UpdateForm.jsx
+// --updatePost() called upon clicking update btn in UpdateForm.jsx
+
 const App = () => {
   
-  const [showPost, setShowPost] = useState(true); // toggle post card state
-  const [allPost, setAllPost] = useState([]); // All posts save here
+  const [showPost, setShowPost] = useState(true) // toggle post card state
+  const [allPost, setAllPost] = useState([]) // All posts save here
 
 // Post delete function
   const deletePost = (id) => {
-    const updatedPost = allPost.filter((elem, idx) => idx !== id);
+    const updatedPost = allPost.filter(( idx) => idx !== id);
     setAllPost([...updatedPost]);
   };
   

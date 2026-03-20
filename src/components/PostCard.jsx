@@ -1,11 +1,16 @@
 import { useState } from "react";
 import UpdateForm from "./UpdateForm";
 
+// postDetails is object of current post 
 const PostCard = ({ postDetails, deletePost, id, updatePost }) => {
+// update form toggle state
   const [showUpdate, setShowUpdate] = useState(false);
+  
   return (
     <>
+      {/* if ShowUpdate state 'true' Update form will display otherwise card will display */}
       {showUpdate ? (
+        
         <UpdateForm postDetails={postDetails} updatePost={updatePost} setShowUpdate={setShowUpdate} id={id} />
       ) : (
         <div className="post-card w-[380px]  rounded-2xl shadow-md bg-gray-50 h-fit p-2 flex flex-col text-gray-800 hover:shadow-xl transition duration-300">
